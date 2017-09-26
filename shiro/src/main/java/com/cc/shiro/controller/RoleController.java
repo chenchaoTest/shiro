@@ -1,5 +1,9 @@
 package com.cc.shiro.controller;
 
+import java.io.UnsupportedEncodingException;
+
+import net.sf.json.JSONObject;
+
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,11 +11,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cc.shiro.pojo.SysRole;
 import com.cc.shiro.service.ResourceService;
 import com.cc.shiro.service.RoleService;
+import com.cc.shiro.taglib.Functions;
 
 @Controller
 @RequestMapping("/role")
@@ -82,5 +88,13 @@ public class RoleController {
 
     private void setCommonData(Model model) {
         model.addAttribute("resourceList", resourceService.findAll());
+    }
+    
+    @RequestMapping(value="/{roleIds}/query",method = RequestMethod.GET,produces = "text/json;charset=UTF-8")
+    @ResponseBody
+    public String getRoles(@PathVariable("roleIds") String roleIds) throws UnsupportedEncodingException{
+    	String role = Functions.roleNames(roleIds);
+    	System.out.println(role);
+    	return role;
     }
 }

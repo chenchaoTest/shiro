@@ -31,4 +31,10 @@ public interface ResourceService {
 	 * @return
 	 */
 	List<SysResource> findMenus(Set<String> permissions);
+	/**
+	 * 通过父节点获取所有子节点
+	 * @param parendsId
+	 * @return
+	 */
+	List<SysResource> findSubPermission(List<Long> parendIds);
 }

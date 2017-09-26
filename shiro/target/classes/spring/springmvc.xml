@@ -17,7 +17,5 @@
 	</bean>
 	
 	<!-- 资源映射 -->
-	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
-	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
 	<mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
 </beans>

@@ -14,6 +14,7 @@ import com.cc.shiro.pojo.SysUserExample;
 import com.cc.shiro.pojo.SysUserExample.Criteria;
 import com.cc.shiro.service.RoleService;
 import com.cc.shiro.service.UserService;
+import com.cc.shiro.utils.EasyUIResult;
 import com.cc.shiro.utils.PasswordHelper;
 @Service
 public class UserServiceImpl implements UserService {
@@ -104,6 +105,18 @@ public class UserServiceImpl implements UserService {
 			return permissions;
 		}
 		return null;
+	}
+
+	public EasyUIResult findAll(int page, int rows) {
+		EasyUIResult result = new EasyUIResult();
+		/*PageHelper.startPage(page, rows);
+		SysUserExample example = new SysUserExample();
+		List<SysUser> userList = userMapper.selectByExample(example);
+		EasyUIResult result = new EasyUIResult();
+		result.setRows(userList);
+		PageInfo<SysUser> pageInfo = new PageInfo<SysUser>(userList);
+		result.setTotal(pageInfo.getTotal());*/
+		return result;
 	}
 
 }

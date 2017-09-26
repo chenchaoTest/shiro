@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import com.cc.shiro.pojo.SysUser;
+import com.cc.shiro.utils.EasyUIResult;
 
 public interface UserService {
 
@@ -49,4 +50,6 @@ public interface UserService {
      * @return
      */
     public Set<String> findPermissions(String username);
+    
+    public EasyUIResult findAll(int page, int rows);
 }

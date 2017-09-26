@@ -1,5 +1,6 @@
 package com.cc.shiro.service.test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -57,7 +58,7 @@ public class ResourceServiceTest {
 	}
 	@Test
 	public void findOne(){
-		SysResource resource = resourceService.findOne(new Long(5));
+		SysResource resource = resourceService.findOne(new Long(1));
 		
 		System.out.println("id:"+resource.getId()+"name:"+resource.getName()+"permission"+resource.getPermission());
 	}
@@ -87,7 +88,17 @@ public class ResourceServiceTest {
 		permissions.add("44");
 		List<SysResource> resourceList = resourceService.findMenus(permissions);
 		for (SysResource resource : resourceList) {
-			System.out.println("id:"+resource.getId()+"name:"+resource.getName()+"permission"+resource.getPermission());
+			System.out.println("id:"+resource.getId()+"name:"+resource.getName()+"permission"+resource.getPermission()+"父节点"+resource.getParentId());
+		}
+	}
+	@Test
+	public void findSubPermission(){
+		List<Long> l = new ArrayList<Long>();
+		l.add(new Long(11));
+		l.add(new Long(21));
+		List<SysResource> resourceList = resourceService.findSubPermission(l);
+		for (SysResource resource : resourceList) {
+			System.out.println("id:"+resource.getId()+"name:"+resource.getName()+"permission"+resource.getPermission()+"父节点"+resource.getParentId());
 		}
 	}
 }

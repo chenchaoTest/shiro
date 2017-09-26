@@ -99,4 +99,15 @@ public class ResourceServiceImpl implements ResourceService {
         return false;
     }
 
+	public List<SysResource> findSubPermission(List<Long> parendIds) {
+		SysResourceExample example = new SysResourceExample();
+		Criteria criteria = example.createCriteria();
+		criteria.andParentIdIn(parendIds);
+		List<SysResource> resourceList = resourceMapper.selectByExample(example);
+		if(resourceList.size()>0){
+			return resourceList;
+		}
+		return null;
+	}
+
 }

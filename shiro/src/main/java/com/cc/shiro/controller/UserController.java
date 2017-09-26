@@ -7,12 +7,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cc.shiro.pojo.SysUser;
 import com.cc.shiro.service.OrganizationService;
 import com.cc.shiro.service.RoleService;
 import com.cc.shiro.service.UserService;
+import com.cc.shiro.utils.EasyUIResult;
 
 @Controller
 @RequestMapping("/user")
@@ -28,10 +30,16 @@ public class UserController {
     @RequiresPermissions("user:view")
     @RequestMapping(method = RequestMethod.GET)
     public String list(Model model) {
-    	System.out.println(userService.findAll().size());
         model.addAttribute("userList", userService.findAll());
         return "user/list";
     }
+    /*@RequiresPermissions("user:view")
+    @RequestMapping(method = RequestMethod.GET)
+    @ResponseBody
+    public EasyUIResult list(Integer page, Integer rows) {
+    	EasyUIResult result = userService.findAll(page, rows);
+        return result;
+    }*/
 
     @RequiresPermissions("user:create")
     @RequestMapping(value = "/create", method = RequestMethod.GET)
