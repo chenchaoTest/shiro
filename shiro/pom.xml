@@ -70,11 +70,7 @@
 			<artifactId>mybatis-paginator</artifactId>
 			<version>${mybatis.paginator.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper</artifactId>
-			<version>${pagehelper.version}</version>
-		</dependency>
+		
 		<!-- MySql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -194,23 +190,6 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
-		<!-- j -->
-		<dependency>
-			<groupId>com.octo.captcha</groupId>
-			<artifactId>jcaptcha</artifactId>
-			<version>${jcaptcha.version}</version>
-		</dependency>
-			<dependency>
-				<groupId>com.octo.captcha</groupId>
-				<artifactId>jcaptcha-integration-simple-servlet</artifactId>
-				<version>${jcaptcha.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>servlet-api</artifactId>
-						<groupId>javax.servlet</groupId>
-					</exclusion>
-				</exclusions>
-			</dependency>
 	</dependencies>
 	<build>
 		<!-- 配置插件 -->
