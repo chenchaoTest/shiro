@@ -30,7 +30,7 @@ public class ResourceServiceTest {
 		}
 	}
 	
-	@Test
+	/*@Test
 	public void createResource(){
 		SysResource resource = new SysResource();
 		resource.setId(new Long(5));
@@ -100,5 +100,5 @@ public class ResourceServiceTest {
 		for (SysResource resource : resourceList) {
 			System.out.println("id:"+resource.getId()+"name:"+resource.getName()+"permission"+resource.getPermission()+"¸¸½Úµã"+resource.getParentId());
 		}
-	}
+	}*/
 }

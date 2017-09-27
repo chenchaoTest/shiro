@@ -1,0 +1,5 @@
+package com.cc.shiro.controller;
+
+public class UserController {
+
+}

@@ -21,6 +21,14 @@ public class OrganizationServiceTest {
 	private OrganizationService organizationService;
 	
 	@Test
+	public void findAll(){
+		List<SysOrganization> oList = organizationService.findAll();
+		for (SysOrganization o : oList) {
+			System.out.println("name:"+o.getName()+"Parentid:"+o.getParentId());
+		}
+	}
+	
+	/*@Test
 	public void createOrganization(){
 		SysOrganization o = new SysOrganization();
 		o.setId(new Long(5));
@@ -29,14 +37,6 @@ public class OrganizationServiceTest {
 		o.setParentIds("0/1/");
 		o.setAvailable(true);
 		organizationService.createOrganization(o);
-	}
-	
-	@Test
-	public void findAll(){
-		List<SysOrganization> oList = organizationService.findAll();
-		for (SysOrganization o : oList) {
-			System.out.println("name:"+o.getName()+"Parentid:"+o.getParentId());
-		}
 	}
 	
 	@Test
@@ -78,5 +78,5 @@ public class OrganizationServiceTest {
 		map.put("targetIds", "0/1/2/3/4/5/");
 		map.put("sourceIds", "6/7/8/");
 		organizationService.move(map);
-	}
+	}*/
 }

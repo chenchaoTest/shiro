@@ -33,7 +33,7 @@ public class RoleServiceTest {
 	/**
 	 * 添加Role
 	 */
-	@Test
+	/*@Test
 	public void createRole(){
 		SysRole role = new SysRole();
 		role.setId(new Long(123));
@@ -44,9 +44,9 @@ public class RoleServiceTest {
 		roleService.createRole(role);
 		System.out.println("添加成功");
 	}
-	/**
+	*//**
 	 * 修改role
-	 */
+	 *//*
 	@Test
 	public void updateRole(){
 		SysRole role = new SysRole();
@@ -81,5 +81,5 @@ public class RoleServiceTest {
 		for (String permission : Permissions) {
 			System.out.println(permission);
 		}
-	}
+	}*/
 }

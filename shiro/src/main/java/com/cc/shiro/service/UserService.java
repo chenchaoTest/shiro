@@ -51,5 +51,4 @@ public interface UserService {
      */
     public Set<String> findPermissions(String username);
     
-    public EasyUIResult findAll(int page, int rows);
 }

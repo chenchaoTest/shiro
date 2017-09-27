@@ -32,14 +32,14 @@ public class UserServiceTest {
 	/**
 	 * 根据用户Id删除用户
 	 */
-	@Test
+	/*@Test
 	public void deleteUser(){
 		userService.deleteUser(new Long(123));
 		System.out.println("删除成功");
 	}
-	/**
+	*//**
 	 * 添加用户
-	 */
+	 *//*
 	@Test
 	public void insertUser(){
 		SysUser user = new SysUser();
@@ -53,9 +53,9 @@ public class UserServiceTest {
 		userService.createUser(user);
 		System.out.println("添加成功");
 	}
-	/**
+	*//**
 	 * 修改用户
-	 */
+	 *//*
 	@Test
 	public void updateUser(){
 		SysUser user = new SysUser();
@@ -69,32 +69,32 @@ public class UserServiceTest {
 		userService.updateUser(user);
 		System.out.println("修改完成");
 	}
-	/**
+	*//**
 	 * 修改用户密码
-	 */
+	 *//*
 	@Test
 	public void updateUserPassword(){
 		userService.changePassword(new Long(1), "admin");
 	}
-	/**
+	*//**
 	 * 获取一个
-	 */
+	 *//*
 	@Test
 	public void findUser(){
 		SysUser sysUser = userService.findOne(new Long(123));
 		System.out.println("用户名:"+sysUser.getUsername()+"用户id:"+sysUser.getId()+"用户role:"+sysUser.getRoleIds()+"用户权限:"+sysUser.getOrganizationId()+"用户密码:"+sysUser.getPassword());
 	}
-	/**
+	*//**
 	 * 通过用户名获取用户
-	 */
+	 *//*
 	@Test
 	public void finaUserByUserName(){
 		SysUser sysUser = userService.findByUsername("chenchao123");
 		System.out.println("用户名:"+sysUser.getUsername()+"用户id:"+sysUser.getId()+"用户role:"+sysUser.getRoleIds()+"用户权限:"+sysUser.getOrganizationId()+"用户密码:"+sysUser.getPassword());
 	}
-	/**
+	*//**
 	 * 根据用户名获取用户Role
-	 */
+	 *//*
 	@Test
 	public void findRoles(){
 		Set<String> roles = userService.findRoles("chenchao123");
@@ -102,14 +102,14 @@ public class UserServiceTest {
 			System.out.println(role);
 		}
 	}
-	/**
+	*//**
 	 * 通过用户名获取权限
-	 */
+	 *//*
 	@Test
 	public void findPermissions(){
 		Set<String> permissions = userService.findPermissions("chenchao123");
 		for (String permission : permissions) {
 			System.out.println(permission);
 		}
-	}
+	}*/
 }

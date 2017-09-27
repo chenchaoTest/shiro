@@ -107,16 +107,4 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 
-	public EasyUIResult findAll(int page, int rows) {
-		EasyUIResult result = new EasyUIResult();
-		/*PageHelper.startPage(page, rows);
-		SysUserExample example = new SysUserExample();
-		List<SysUser> userList = userMapper.selectByExample(example);
-		EasyUIResult result = new EasyUIResult();
-		result.setRows(userList);
-		PageInfo<SysUser> pageInfo = new PageInfo<SysUser>(userList);
-		result.setTotal(pageInfo.getTotal());*/
-		return result;
-	}
-
 }

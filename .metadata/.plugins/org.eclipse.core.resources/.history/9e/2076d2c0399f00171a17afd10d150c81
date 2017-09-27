@@ -1,0 +1,6 @@
+package com.cc.shiro.controller;
+@Controller
+@RequestMapping("/resource")
+public class ResourceController {
+
+}

@@ -1,0 +1,7 @@
+package com.cc.shiro.jcaptcha;
+
+import com.octo.captcha.service.image.DefaultManageableImageCaptchaService;
+
+public class Chen extends DefaultManageableImageCaptchaService{
+
+}
